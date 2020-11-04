@@ -3,7 +3,15 @@ from telegram.ext import Updater, CommandHandler, Filters, MessageHandler
 import logging
 import json 
 
+'''
 
+{
+    "token" : "", 
+    "admin" : [],
+    "client_id" : ""
+}
+
+'''
 def start(update, context):
     context.bot.send_message(chat_id = update.effective_chat.id, text = "Ciao")
 
