@@ -22,14 +22,14 @@ def idRequest(update, context):
     context.bot.send_message(chat_id = update.effective_chat.id, text = update.effective_chat.id)
 
 def contactAdmin(update, context):
-    context.bot.send_message(chat_id = admin[0], text = update.message.text)
+    context.bot.send_message(chat_id = admins[0], text = update.message.text)
 
 f = open("configuration.json", "r")
 
 ids = json.loads(f.read())
 
 bot_token = ids['token']
-admin = ids['admin']
+admin = ids['admins']
 bot = telegram.Bot(token = bot_token)
 
 print(bot.get_me())
