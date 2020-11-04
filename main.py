@@ -16,7 +16,7 @@ def idRequest(update, context):
 def contactAdmin(update, context):
     context.bot.send_message(chat_id = admin[0], text = update.message.text)
 
-f = open("ids.json", "r")
+f = open("configuration.json", "r")
 
 ids = json.loads(f.read())
 
